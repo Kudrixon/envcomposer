@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<link rel="stylesheet" href="index.css">
+
+<head>
+    <title>AGH Env Composer</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="http://localhost:1313/" style="text-decoration: none" title="AGH Env Compose (Homepage)">AGH
+                    Env Composer</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <header class="content-header">
+            <h1>Choose programs which You want to be included in installing script</h1>
+        </header>
+
+
+        <div id="programCheckboxes"></div>
+
+        <h1>Operating system</h1>
+        <label><input type="radio" name="system" id="linux-checkbox" value="0"> Linux</label>
+        <label><input type="radio" name="system" id="windows-checkbox" value="0"> Windows</label>
+        
+
+
+        <br><button id="downloadButton" href="./installer.ps1">Download Scripts</button></br>
+    
+    </main>
+
+    <footer class="footer">
+        <span>&copy; 2023 <a href="http://localhost:1313/">AGH Env Composer</a></span>
+        <span>
+            Created by Przemyslaw Kudriawcew
+        </span>
+    </footer>
+
+    <script src="download_page.js"></script>
+
+
+</body>
+
+</html>

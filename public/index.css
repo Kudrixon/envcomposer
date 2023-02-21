@@ -1,0 +1,77 @@
+.logo {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20%;
+    margin-top: 1%;
+}
+
+a {
+    color: inherit;
+}
+
+
+body {
+    background-color: whitesmoke;
+}
+
+main {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding: 70px 0;
+}
+
+.content-body {
+    padding-top: 10px;
+    padding-bottom: 40px;
+    color: grey;
+}
+
+
+select {
+    display: inline-block;
+    width: 10em;
+}
+
+label {
+    display: inline-block;
+    font-size: 20px;
+    width: 8em;
+    margin-right: 0.1em;
+    padding-top: 0.5em;
+    text-align: center;
+}
+
+
+#programCheckboxes > label {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 300px;
+    justify-content: center;
+    white-space: nowrap;
+    order: -1;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: grey;
+    text-align: center;
+}
+
+button {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 50px;
+    padding: 14px 20px;
+    background-color: darkgray;
+    color: black;
+    margin-top: 1em;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
