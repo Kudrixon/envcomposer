@@ -2,6 +2,6 @@
 
 To run:
 
-npm install
+```npm install```
 
-npm run start:all
+```npm run start:all```
