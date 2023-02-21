@@ -18,20 +18,15 @@ const facultiesRoutes = require('./api/routes/facultiesRoutes');
 const lecturersRoutes = require('./api/routes/lecturersRoutes');
 const coursesRoutes = require('./api/routes/coursesRoutes');
 
-
-
-
 app.use('/semesters', semestersRoutes);
 app.use('/faculties', facultiesRoutes);
 app.use('/lecturers', lecturersRoutes);
 app.use('/courses', coursesRoutes);
 
+module.exports = app;
 
+// const port = process.env.PORT || 3000;
+// app.listen(port, () => {
+//   console.log(`API server is listening on port ${port}`);
+// });
 
-
-// use other route files as needed
-
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`API server is listening on port ${port}`);
-});

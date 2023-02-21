@@ -17,14 +17,12 @@ function redirectToPage() {
             }
         }
 
-        // Get the data and populate the select elements
         Promise.all([
             getData('http://localhost:3000/semesters'),
             getData('http://localhost:3000/faculties'),
             getData('http://localhost:3000/lecturers'),
             getData('http://localhost:3000/courses')
         ]).then(([semestersData, facultiesData, lecturersData, coursesData]) => {
-            // Populate the semester select element
             semestersData.semesters.forEach(semester => {
                 const semesterObject = JSON.parse(semester);
                 const option = document.createElement("option");
@@ -33,7 +31,6 @@ function redirectToPage() {
                 semesterSelect.appendChild(option);
             });
 
-            // Populate the faculty select element
             facultiesData.faculties.forEach(faculty => {
                 const facultyObject = JSON.parse(faculty);
                 const option = document.createElement("option");
@@ -117,16 +114,6 @@ function redirectToPage() {
         const selectedLecturer = lecturerSelect.value;
         const selectedCourse = courseSelect.value;
 
-        // Prepare data to send to the API
-        const data = {
-            semester: selectedSemester,
-            faculty: selectedFaculty,
-            lecturer: selectedLecturer,
-            course: selectedCourse
-        };
-
-
-
         if (selectedSemester === "" || selectedFaculty === "" || selectedLecturer === "" || selectedCourse === "") {
 
             alert('Please select all values')
@@ -136,29 +123,8 @@ function redirectToPage() {
             localStorage.setItem('selectedLecturerId', selectedLecturer);
             localStorage.setItem('selectedCourseId', selectedCourse);
 
-            // Send data to the API
-            fetch("http://localhost:3000/api/data", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(data)
-            })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error("Network response was not ok");
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log("Data sent to the API:", data);
-                })
-                .catch(error => {
-                    console.error("There was a problem sending data to the API:", error);
-                });
-
-                //redirect to new page
-                window.location.href = "./download_page.html";
+            //redirect to new page
+            window.location.href = "./download_page.html";
             }
             
     });

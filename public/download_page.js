@@ -1,5 +1,5 @@
 const lecturerId = JSON.parse(localStorage.getItem('selectedLecturerId'));
-        const courseId = JSON.parse(localStorage.getItem('selectedCourseId'));
+const courseId = JSON.parse(localStorage.getItem('selectedCourseId'));
 
         fetch(`http://localhost:3000/lecturers/${lecturerId}/course/${courseId}/program`)
             .then(response => response.json())
